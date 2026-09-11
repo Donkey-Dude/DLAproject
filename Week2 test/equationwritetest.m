@@ -1,0 +1,9 @@
+inside = @(x,y,z) ...
+    (x <=5) & (x >=0) &...
+    (z >= 0) & (y >=0)& ...
+    (z <= 5) &(y <=5);
+bounds = [-10 10;
+    -10 10;
+    -10 10];
+
+equationToSTL("cube.stl", inside, bounds, 150);
